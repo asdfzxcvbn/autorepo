@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  server:
+    container_name: tbhrepo-server
+    image: ghcr.io/asdfzxcvbn/fastapi-docker:main
+    environment:
+      DEPLOY_TYPE: prod
+    ports:
+      - 127.0.0.1:12001:5678
+    volumes:
+      - ./serve:/app
